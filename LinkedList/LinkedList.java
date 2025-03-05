@@ -20,7 +20,7 @@ public class LinkedList {
         if(tail==null){
             tail=head;
         }
-
+        
         size+=1; 
     }
 

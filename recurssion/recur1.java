@@ -451,25 +451,42 @@ import java.util.*;
 //                                               STRING
 //================================================================================================================
 
-public class recur1 {
+// public class recur1 {
 
-        public static void main(String[] args) {
-                // String name="divyansh";
-                // System.out.println(name);
+//         public static void main(String[] args) {
+//                 // String name="divyansh";
+//                 // System.out.println(name);
 
-                // String newname="divyansh";
-                // System.out.println(name==newname);
+//                 // String newname="divyansh";
+//                 // System.out.println(name==newname);
 
-                // String name1= new String("divyansh");
-                // String name2= new String("divyansh");
-                // System.out.println(name1==name2);
-                // System.out.println(name1.equals(name2));
+//                 // String name1= new String("divyansh");
+//                 // String name2= new String("divyansh");
+//                 // System.out.println(name1==name2);
+//                 // System.out.println(name1.equals(name2));
 
-                String str= "Divyansh Yadav";
-                String arr[]=str.split(" ");
-                System.out.println( arr.toString());
-        }
-}
+//                 String str= "Divyansh Yadav";
+//                 String arr[]=str.split(" ");
+//                 System.out.println( arr.toString());
+//         }
+// }
 
 
     
+
+public class recur1 {
+        private static void SayHi(int count){
+                System.out.println("Hi!!");
+                if(count<=1){
+                        return;
+                }
+
+                SayHi(count-1);  //call stack memory
+
+                
+        }
+        public static void main(String[] args) {
+               
+            SayHi(3);    
+        }
+}
