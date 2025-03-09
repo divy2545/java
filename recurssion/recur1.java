@@ -751,3 +751,103 @@ import java.util.*;
 
 
 
+
+
+//=================================================================================================================
+//  4.                             Check if the array is sorted (strictly increasing)
+//================================================================================================================
+
+// public class recur1 {
+//         public static boolean check(int[] arr,int idx){
+//                 if(idx==arr.length-1){
+//                         return true;
+//                 }
+
+//                 if(arr[idx] < arr[idx+1]){
+//                         // array is sorted
+//                         return check(arr, idx+1);
+//                 }
+//                 else{
+//                         return false;
+//                 }
+              
+                
+//         }
+//       public static void main(String[] args) {
+//         int[] arr={1,3,2,3,4,4,5};
+//         boolean ans=check(arr, 0);
+//         System.out.println(ans);
+//       }
+// }
+
+
+
+
+
+
+//===============================================================================================================
+//  5.                     move all 'x' at the end of the string
+//==============================================================================================================
+
+
+// public class recur1 {
+//         public static void moveAllX(String s, int idx, int count, String newStr){
+                
+//                 if(idx==s.length()){
+//                         for(int i=0;i<count;i++){
+//                                 newStr+='x';
+//                         }
+//                         System.out.println(newStr);
+//                         return;
+//                 }
+
+
+//                 char ch= s.charAt(idx);
+//                 if(ch=='x'){
+//                         count++;
+//                         moveAllX(s, idx+1, count, newStr);
+//                 }
+//                 else{
+//                         newStr+=ch;
+//                         moveAllX(s, idx+1, count, newStr);
+//                 }
+//         }
+//          public static void main(String[] args) {
+//                 moveAllX("axbxcxdx", 0, 0, "");
+//          }
+// }
+
+
+
+
+
+
+//================================================================================================================
+//  6.                           Remove duplicates from a string
+//===============================================================================================================
+
+
+public class recur1 {
+        public static boolean[] arr= new boolean[26];
+
+        public static void removeDuplicates(String s, int idx, String newStr){
+              if(idx==s.length()){
+                System.out.println(newStr);
+                return;
+              }
+
+              char ch= s.charAt(idx);
+              if(arr[ch-'a']){
+                removeDuplicates(s, idx+1,newStr);
+              }
+              else{
+                newStr+=ch;
+                arr[ch-'a']=true;
+                removeDuplicates(s, idx+1, newStr);
+              }
+        }
+        public static void main(String[] args) {
+                String str="helloworld";
+                removeDuplicates(str, 0, "");
+        }
+}
