@@ -664,23 +664,90 @@ import java.util.*;
 
 
 //================================================================================================================
-//                              prb no: 1        Tower of Hanoi
+//    1.                                         Tower of Hanoi
 // ===============================================================================================================
 
 
-public class recur1 {
-        public static void TOH(int n,String src, String hlpr, String dest){
-                if(n==1){
-                        System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
-                        return;
-                }
-                TOH(n-1,src,dest,hlpr);
-                System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
-                TOH(n-1,hlpr,src,dest);
-        }
-        public static void main(String[] args) {
-                int n=3;
-                TOH(n, "S", "H", "D");
+// public class recur1 {
+//         public static void TOH(int n,String src, String hlpr, String dest){
+//                 if(n==1){
+//                         System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
+//                         return;
+//                 }
+//                 TOH(n-1,src,dest,hlpr);
+//                 System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
+//                 TOH(n-1,hlpr,src,dest);
+//         }
+//         public static void main(String[] args) {
+//                 int n=3;
+//                 TOH(n, "S", "H", "D");
 
-        }
-}
+//         }
+// }
+
+
+
+
+
+//============================================================================================================
+//    2.               print string in reverse
+//==========================================================================================================
+
+
+// public class recur1 {
+//       public static void printRev(String s, int idx){
+//         if(idx==0){
+//                 System.out.println(s.charAt(idx));
+//                 return;
+//         }
+//         System.out.print(s.charAt(idx));
+//         printRev(s, idx-1);
+//       }
+//         public static void main(String[] args) {
+//                 String str="abcd";
+//                 printRev(str, str.length()-1);
+//         }
+// }
+
+
+
+
+//===============================================================================================================
+//   3.                   find the first and the last ocurrence of an element in a string
+//==============================================================================================================
+
+
+// public class recur1 {
+//        public static int first=-1;
+//        public static int last=-1;
+
+//        public static void findOcurrence(String s, int idx, char element){
+
+//        if(idx==s.length()){
+//         System.out.println("first occurence: "+ first);
+//         System.out.println("last occurence: "+ last);
+//         return;
+//        }
+
+//         char currChar= s.charAt(idx);
+//          if(currChar==element){
+//                 if(first==-1){
+//                         first=idx;
+//                 }
+//                 else{
+//                         last=idx;
+//                 }
+//          }
+
+//          findOcurrence(s, idx+1, element);
+
+//         }
+
+//         public static void main(String[] args) {
+//                 String str="aabjdsahsdh";
+//                 findOcurrence(str, 0, 'a');
+//         }
+// }
+
+
+
