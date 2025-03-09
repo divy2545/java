@@ -472,21 +472,215 @@ import java.util.*;
 // }
 
 
-    
 
-public class recur1 {
-        private static void SayHi(int count){
-                System.out.println("Hi!!");
-                if(count<=1){
-                        return;
-                }
 
-                SayHi(count-1);  //call stack memory
+
+
+
+
+
+
+
+
+
+
+
+    //============================================================================================================
+    //                                       RECURSSION
+    //============================================================================================================
+
+
+// a function that calls itself is known as recurssion..
+
+
+
+// public class recur1 {
+//         private static void SayHi(int count){
+//                 System.out.println("Hi!!");
+//                 if(count<=1){
+//                         return;
+//                 }
+
+//                 SayHi(count-1);  //call stack memory
 
                 
+//         }
+//         public static void main(String[] args) {
+               
+//             SayHi(3);    
+//         }
+// }
+
+
+
+
+
+
+//====================  print numbers from 5 to 1 =============================================
+
+
+// public class recur1 {
+
+//         public static void printnum(int n){
+//                 if(n==0){
+//                         return;
+//                 }
+//                 System.out.println(n);
+//                 printnum(n-1);
+//         }
+//         public static void main(String[] args) {
+//                 int n=5;
+//             printnum(n);
+//         }
+// }
+
+
+
+
+
+//========================== print sum of first n natural numbers =============================================
+
+
+// public class recur1 {
+
+//         public static int sum(int n){
+//                 if(n==0){
+//                         return 0;
+//                 }
+//                 return n + sum(n-1);    
+//         }
+
+//         public static void main(String[] args) { 
+//                int n=5;
+//                System.out.println(sum(n));
+//         }
+// }
+
+
+
+
+
+// =====================  factorial of n ==========================
+
+
+// public class recur1 {
+//         public static int  factorial(int n){
+//                  if(n==1) {
+//                         return 1;
+//                  }
+//                  return n* factorial(n-1);
+//         }
+//         public static void main(String[] args) {
+//               System.out.println(factorial(5));  
+//         }
+// }
+
+
+
+
+
+//============ fibonacci sequence ===============================
+
+
+// public class recur1 {
+//         public static void printfib(int a, int b, int n){
+//                 if(n==0){
+//                         return;
+//                 }
+//                 int c=a+b;
+//                 System.out.println(c);
+//                 printfib(b, c, n-1);
+//         }
+//         public static void main(String[] args) {
+//                 int a=0;
+//                 int b=1;
+//                 System.out.println(a);
+//                 System.out.println(b);
+//                 int n=8;
+//                 printfib(a,b,n-2);
+//         }
+// }
+
+
+
+
+
+//============ x^n  (stack height should be n)   ==============================
+
+// public class recur1 {
+//         public static int calc(int x, int n){
+//                if(n==0){
+//                 return 1;
+//                }
+//                if(x==0){
+//                 return 0;
+//                }
+//                 return x * calc(x, n-1);
+//         }
+
+//         public static void main(String[] args) {
+//                 int ans= calc(2, 5);
+//                 System.out.println(ans);
+//         }
+// }
+
+
+
+
+
+
+
+//============ x^n  (stack height should be logn)   ==============================
+
+// public class recur1 {
+//         public static int calc(int x, int n) {
+//                 if(n==0){
+//                         return 1;
+//                 }
+//                if(n%2==0){
+//                 return calc(x,n/2) * calc(x,n/2);
+//                }
+//                else{
+//                 return x* calc(x,n/2) * calc(x,n/2);
+//                }
+//         }
+
+//         public static void main(String[] args) {
+//                 int ans= calc(2,5);
+//                 System.out.println(ans);
+//         }
+// }
+
+
+
+
+
+
+
+//================================================================================================================
+//                              recurssion (level- 2)
+// ===============================================================================================================
+
+
+
+//================================================================================================================
+//                              prb no: 1        Tower of Hanoi
+// ===============================================================================================================
+
+
+public class recur1 {
+        public static void TOH(int n,String src, String hlpr, String dest){
+                if(n==1){
+                        System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
+                        return;
+                }
+                TOH(n-1,src,dest,hlpr);
+                System.out.println( " transfer disk "+ n+ " from " +src +" to " + dest + " using " + hlpr);
+                TOH(n-1,hlpr,src,dest);
         }
         public static void main(String[] args) {
-               
-            SayHi(3);    
+                int n=3;
+                TOH(n, "S", "H", "D");
+
         }
 }
