@@ -827,27 +827,59 @@ import java.util.*;
 //===============================================================================================================
 
 
+// public class recur1 {
+//         public static boolean[] arr= new boolean[26];
+
+//         public static void removeDuplicates(String s, int idx, String newStr){
+//               if(idx==s.length()){
+//                 System.out.println(newStr);
+//                 return;
+//               }
+
+//               char ch= s.charAt(idx);
+//               if(arr[ch-'a']){
+//                 removeDuplicates(s, idx+1,newStr);
+//               }
+//               else{
+//                 newStr+=ch;
+//                 arr[ch-'a']=true;
+//                 removeDuplicates(s, idx+1, newStr);
+//               }
+//         }
+//         public static void main(String[] args) {
+//                 String str="helloworld";
+//                 removeDuplicates(str, 0, "");
+//         }
+// }
+
+
+
+
+
+//==============================================================================================================
+//  7.                                  Print all the subsequences
+//=============================================================================================================
+
+
+
 public class recur1 {
-        public static boolean[] arr= new boolean[26];
+        public static void subsequences(String s, int idx, String newstr){
 
-        public static void removeDuplicates(String s, int idx, String newStr){
-              if(idx==s.length()){
-                System.out.println(newStr);
-                return;
-              }
+                if(idx==s.length()){
+                        System.out.println(newstr);
+                        return;
+                }
 
-              char ch= s.charAt(idx);
-              if(arr[ch-'a']){
-                removeDuplicates(s, idx+1,newStr);
-              }
-              else{
-                newStr+=ch;
-                arr[ch-'a']=true;
-                removeDuplicates(s, idx+1, newStr);
-              }
+                char currChar= s.charAt(idx);
+
+                // to be
+                subsequences(s, idx+1, newstr+currChar);
+
+                //not to be 
+                subsequences(s, idx+1, newstr);
         }
         public static void main(String[] args) {
-                String str="helloworld";
-                removeDuplicates(str, 0, "");
+                String str= "aabbcd";
+                subsequences(str, 0, "");
         }
 }
