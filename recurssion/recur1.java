@@ -537,6 +537,22 @@ import java.util.*;
 
 
 
+public class recur1 {
+       public static void print(int n){
+        if(n==0){
+             return;
+        }
+        System.out.println(n);
+        print(n-1);
+       }
+        public static void main(String[] args) {
+                Scanner sc= new Scanner(System.in);
+                System.out.print("enter n : ");
+                int n = sc.nextInt();
+                print(n);
+        }
+}
+
 
 //========================== print sum of first n natural numbers =============================================
 
@@ -862,24 +878,24 @@ import java.util.*;
 
 
 
-public class recur1 {
-        public static void subsequences(String s, int idx, String newstr){
+// public class recur1 {
+//         public static void subsequences(String s, int idx, String newstr){
 
-                if(idx==s.length()){
-                        System.out.println(newstr);
-                        return;
-                }
+//                 if(idx==s.length()){
+//                         System.out.println(newstr);
+//                         return;
+//                 }
 
-                char currChar= s.charAt(idx);
+//                 char currChar= s.charAt(idx);
 
-                // to be
-                subsequences(s, idx+1, newstr+currChar);
+//                 // to be
+//                 subsequences(s, idx+1, newstr+currChar);
 
-                //not to be 
-                subsequences(s, idx+1, newstr);
-        }
-        public static void main(String[] args) {
-                String str= "aabbcd";
-                subsequences(str, 0, "");
-        }
-}
+//                 //not to be 
+//                 subsequences(s, idx+1, newstr);
+//         }
+//         public static void main(String[] args) {
+//                 String str= "aabbcd";
+//                 subsequences(str, 0, "");
+//         }
+// }
