@@ -536,22 +536,24 @@ import java.util.*;
 
 
 
+//=========================
 
-public class recur1 {
-       public static void print(int n){
-        if(n==0){
-             return;
-        }
-        System.out.println(n);
-        print(n-1);
-       }
-        public static void main(String[] args) {
-                Scanner sc= new Scanner(System.in);
-                System.out.print("enter n : ");
-                int n = sc.nextInt();
-                print(n);
-        }
-}
+
+// public class recur1 {
+//        public static void print(int n){
+//         if(n==0){
+//              return;
+//         }
+//         System.out.println(n);
+//         print(n-1);
+//        }
+//         public static void main(String[] args) {
+//                 Scanner sc= new Scanner(System.in);
+//                 System.out.print("enter n : ");
+//                 int n = sc.nextInt();
+//                 print(n);
+//         }
+// }
 
 
 //========================== print sum of first n natural numbers =============================================
@@ -572,6 +574,90 @@ public class recur1 {
 //         }
 // }
 
+
+//=========================
+
+
+// public class recur1 {
+//          static int n;
+//       public static void print(int x){
+//           if(x>n){      // base case
+//             return;
+//           }
+//         System.out.println(x);    // work
+//         print(x+1); // call
+                     
+//       }
+//         public static void main(String[] args) {
+//                 Scanner sc= new Scanner(System.in);
+//                 System.out.print("enter n : ");
+//                 n = sc.nextInt();
+//                 print(1);
+//         }
+// }
+
+
+
+
+
+
+
+//========================== after recurive call==========================================
+
+// public class recur1 {
+//         public static void print(int n){
+//                 if(n==0) return;
+//                 print(n-1);
+//                 System.out.println(n);
+
+//         }
+//         public static void main(String[] args) {
+//                 Scanner sc= new Scanner(System.in);
+//                                 System.out.print("enter n : ");
+//                                 int n = sc.nextInt();
+//                                 print(n);  
+//         }
+// }
+
+
+
+// sum of 1 to n (parameterized)
+
+// public class recur1 {
+//         public static void sum(int n,int s){
+//          if(n==0){ 
+//                 System.out.println(s);
+//                 return;}   //base case
+//           sum(n-1,s+n);
+ 
+ 
+//         }
+//          public static void main(String[] args) {
+//                  sum(5,0);
+                 
+//          }
+//  }
+ 
+ 
+
+
+
+//================================================
+//return type
+
+
+// public class recur1 {
+//        public static int sum(int n){
+//         if(n==0 || n==1) return n;   //base case
+//         return n+sum(n-1);
+
+
+//        }
+//         public static void main(String[] args) {
+//                 int s=sum(5);
+//                 System.out.println(s);
+//         }
+// }
 
 
 
