@@ -661,6 +661,20 @@ import java.util.*;
 
 
 
+//================== n^p ========================================
+
+// public class recur1 {
+//         public static int power(int n,int p, int ans){
+//                 if(p==0){
+//                     return 1;
+//                 }
+//                 return n*power(n,p-1,ans);
+//         }
+//         public static void main(String[] args) {
+//                System.out.println(power(2,5,0)); 
+//         }
+// }
+
 
 // =====================  factorial of n ==========================
 
